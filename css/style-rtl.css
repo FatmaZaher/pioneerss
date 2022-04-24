@@ -1,0 +1,10 @@
+body {
+  direction: rtl;
+  text-align: right;
+}
+.slides .slide-content .content .buttons .the-btn svg {
+  margin-left: 5px;
+}
+.footer .footer-list li .item-icon {
+  margin-left: 10px;
+}
