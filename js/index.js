@@ -99,6 +99,7 @@ $(document).ready(function () {
         once: true,
     });
 })
+const input = document.getElementById('phone')
 if (input) {
     var iti = window.intlTelInput(input, {
         initialCountry: "auto",

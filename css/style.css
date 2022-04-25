@@ -100,7 +100,7 @@ p {
   margin-left: 0;
   margin-right: 10px;
 }
-.whatsapp{
+.whatsapp {
   position: fixed;
   bottom: 50px;
   left: 50px;
@@ -113,9 +113,8 @@ p {
   background-color: var(--yallow-color);
   display: none;
   transition: all 0.2s ease-in-out;
-
 }
-.whatsapp svg{
+.whatsapp svg {
   width: 35px;
   height: 35px;
   fill: var(--white-color);
@@ -156,7 +155,7 @@ p {
   justify-content: center;
   display: none;
   border-radius: 5px;
-} 
+}
 .navbar .menu-icon svg {
   width: 30px;
   height: 30px;
@@ -301,6 +300,14 @@ p {
   border-color: var(--border-color);
   color: #333333cc;
   padding: 0 20px;
+  height: 40px;
+  font-size: 15px;
+}
+.home .home-content .home-form .form-group .phone_number {
+  border-radius: 5px;
+  border-color: var(--border-color);
+  color: #333333cc;
+  padding-right: 20px;
   height: 40px;
   font-size: 15px;
 }
@@ -676,7 +683,6 @@ p {
 .contact-us .contact-us-content .contact-us-imgs {
   position: relative;
   transition: all 0.2s ease-in-out;
-
 }
 .contact-us .contact-us-content .contact-us-imgs img {
   position: absolute;
@@ -981,9 +987,16 @@ p {
 }
 
 .iti--allow-dropdown {
-  direction: ltr;
+  direction: rtl;
+  display: block;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
 }
-
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+  right: 0;
+  left: unset;
+}
 .iti--allow-dropdown {
   flex: 1;
 }
@@ -992,6 +1005,39 @@ p {
   width: 100%;
   border: none;
 }
+.iti__selected-flag{
+  border-left: 1px solid var(--border-color);
+}
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type="text"],
+.iti--allow-dropdown input[type="tel"],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type="text"],
+.iti--separate-dial-code input[type="tel"] {
+  padding-left: 20px;
+  padding-right: 52px;
+}
 .iti--allow-dropdown input:focus {
   outline: none;
+}
+.iti.iti--allow-dropdown {
+  width: 100%;
+  direction: ltr;
+}
+
+.input-text-icon-box .iti.iti--allow-dropdown {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid;
+  padding: 7px 4px;
+  border-radius: 5px;
+  border-color: var(--border-color);
+}
+
+.input-text-icon-box span {
+  font-weight: 700;
+  color: var(--black-color);
+  margin-bottom: 18px;
+  display: block;
 }
