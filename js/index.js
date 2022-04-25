@@ -8,6 +8,19 @@ $(document).ready(function () {
         }, 1000)
     })
 
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            $('.whatsapp').css('display', 'flex')
+        }
+        else {
+            $('.whatsapp').css('display', 'none')
+        }
+
+        if ($('.contact-us').scrollTop() == 0) {
+            $(".contact-us-imgs").stop().animate({ "marginTop": "-100px" }, 1000)
+        }
+
+    })
 
     $('.navbar .menu-icon').click(function () {
         $('.body-overlay').fadeIn();
@@ -31,6 +44,8 @@ $(document).ready(function () {
 
 
     $('.our-work-filter-list ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+
         if ($(this).attr('rel')) {
             $('.items-vertical > div').hide().filter('[class="' + $(this).attr('rel') + '"]').show();
         } else {
@@ -84,3 +99,51 @@ $(document).ready(function () {
         once: true,
     });
 })
+if (input) {
+    var iti = window.intlTelInput(input, {
+        initialCountry: "auto",
+        geoIpLookup: function (callback) {
+            $.get("https://ipinfo.io", function () { }, "jsonp").always(function (
+                resp
+            ) {
+                var countryCode = resp && resp.country ? resp.country : "us";
+                callback(countryCode);
+            });
+        },
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.min.js", // just for formatting/placeholders etc
+    });
+
+    $("#phone").on("keyup", function () {
+        const country = iti.getSelectedCountryData();
+        const code = "+" + country.dialCode;
+        const number = $(this).val();
+        const fullNumber = $("#fullNumber");
+
+        fullNumber.val(code + number);
+    });
+
+    var reset = function () {
+        input.classList.remove("error");
+        errorMsg.innerHTML = "";
+        errorMsg.classList.add("hide");
+        validMsg.classList.add("hide");
+    };
+    input.addEventListener("blur", function () {
+        reset();
+        if (input.value.trim()) {
+            if (iti.isValidNumber()) {
+                validMsg.classList.remove("hide");
+            } else {
+                input.classList.add("error");
+                var errorCode = iti.getValidationError();
+                errorMsg.innerHTML = errorMap[errorCode];
+                errorMsg.classList.remove("hide");
+            }
+        }
+    });
+
+    // on keyup / change flag: reset
+    input.addEventListener("change", reset);
+    input.addEventListener("keyup", reset);
+}

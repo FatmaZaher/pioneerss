@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-rtl.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +56,7 @@
         <div class="mobile-head mb-5 d-flex align-items-center justify-content-between">
             <div class="close-icon">
                 <svg>
-                    <use href="./icons.svg#menu"></use>
+                    <use href="./icons.svg#close"></use>
                 </svg>
             </div>
             <div class="mobile-logo">
@@ -90,7 +91,7 @@
                             النص من مولد النص العربى، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص
                         </p>
                         <div class="buttons">
-                            <span class="the-btn mb-3 mb-md-0 ml-5">
+                            <span class="the-btn mb-3 mb-md-0 ml-3 ml-md-5">
                                 <a href="#" data-scroll=".about-us">الملف التعريفي</a>
                             </span>
                             <div class="watch">
@@ -120,14 +121,12 @@
                                 <input type="email" class="form-control" id="name" aria-describedby="emailHelp"
                                     placeholder="ادخل اسم الكريم">
                             </div>
-                            <!-- <div class="form-group input-text-icon-box">
-                                <svg>
-                                    <use href="../icons.svg#phone"></use>
-                                </svg>
-                                <span>رقم الجوال</span>
+                            <div class="input-text-icon-box">
+                            
+                                </svg><span>رقم الجوال</span>
                                 <input class="phone_number" type="text" id="phone">
                                 <input type="hidden" id="fullNumber">
-                            </div> -->
+                            </div>
                             <div class="form-group">
                                 <label for="project">المشروع</label>
                                 <select class="form-control" id="project">
@@ -161,17 +160,14 @@
     <div class="about-us block" id="about-us">
         <div class="container">
             <div class=" d-flex align-items-center justify-content-end flex-md-nowrap flex-wrap">
-                <div class="about-us-imgs order">
+                <div class="about-us-imgs order" data-aos="fade-left">
+
                     <img src="./images/Group 16036.svg" alt="">
-                    <!-- <div class="img-1">
-                        <div class="img"></div>
-                    </div>
-                    <div class="img-2"></div>
-                    <div class="img-3"></div> -->
+
                 </div>
                 <div class="about-us-content d-flex align-items-center justify-content-end">
                     <div class="content-text mb-3 mb-md-0">
-                        <div class="head mb-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="head mb-3" data-aos="fade-up">
                             <h5>
                                 <svg>
                                     <use href="./icons.svg#menu"></use>
@@ -179,7 +175,7 @@
                                 من نحن
                             </h5>
                         </div>
-                        <p data-aos="fade-up" data-aos-delay="400">
+                        <p data-aos="fade-up" data-aos-delay="100">
                             هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
                             العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
                             التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة
@@ -188,7 +184,7 @@
                             الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور
                             مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث ع
                         </p>
-                        <div class="head mb-3 mt-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="head mb-3 mt-4" data-aos="fade-up" data-aos-delay="200">
                             <h5>
                                 <svg>
                                     <use href="./icons.svg#menu"></use>
@@ -196,7 +192,7 @@
                                 رسالتنا
                             </h5>
                         </div>
-                        <p data-aos="fade-up" data-aos-delay="400">
+                        <p data-aos="fade-up" data-aos-delay="300">
                             هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
                             العربى،
                             حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
@@ -211,7 +207,7 @@
                                 رؤيتنا
                             </h5>
                         </div>
-                        <p data-aos="fade-up" data-aos-delay="400">
+                        <p data-aos="fade-up" data-aos-delay="500">
                             هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
                             العربى،
                             حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى
@@ -227,21 +223,22 @@
     <div class="services block" id="services">
         <div class="container">
             <div class="section-head mb-5 d-flex align-items-start justify-content-start">
-                <div class="head-icon">
+                <div class="head-icon" data-aos="fade-up">
                     <svg>
                         <use href="./icons.svg#menu"></use>
                     </svg>
                 </div>
                 <div>
-                    <h4 class="mb-3">خدماتنا المقدمة</h4>
-                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                    <h4 class="mb-3" data-aos="fade-up">خدماتنا المقدمة</h4>
+                    <p data-aos="fade-up">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من
+                        مولد النص العربى،
                         حيث
                         يمكنك أن تولد مثل هذا النص أو العديد من انصوص الأخر</p>
                 </div>
             </div>
             <div class="services-content d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
                 <div class="services-list">
-                    <div class="service mb-5">
+                    <div class="service mb-5" data-aos="fade-left">
                         <div class="item-icon">
                             <svg>
                                 <use href="../icons.svg#service-1"></use>
@@ -251,11 +248,11 @@
                             <h6>الأعمال الجبسية</h6>
                             <p>نقدم كافة خدمات وأعمال الجبس بخبرة ومهارة في تصميم اشكال الجبس بشكل مميز واحترافي
                                 وتقديم أفضل الديكورات المبتكرة بشكل حديث وجديد إلى جميع العملاء
-                                <a href="#">تفاصيل الخدمة</a>
+                                <a href="./pages/gypsum.html">تفاصيل الخدمة</a>
                             </p>
                         </div>
                     </div>
-                    <div class="service mb-5">
+                    <div class="service mb-5" data-aos="fade-left" data-aos-delay="100">
                         <div class="item-icon">
                             <svg>
                                 <use href="../icons.svg#service-2"></use>
@@ -265,11 +262,11 @@
                             <h6>اعمال الدهانات</h6>
                             <p>نستخدم أفضل أنواع الدهانات ومواد الطلاء والأعلى بالجودة والتي تقوم بالحفاظ على الأسطح
                                 من التعفن والعوامل الجوية مثل الحرارة والرطوبة.
-                                <a href="#">تفاصيل الخدمة</a>
+                                <a href="./pages/paints.html">تفاصيل الخدمة</a>
                             </p>
                         </div>
                     </div>
-                    <div class="service mb-5">
+                    <div class="service mb-5" data-aos="fade-left" data-aos-delay="200">
                         <div class="item-icon">
                             <svg>
                                 <use href="../icons.svg#service-3"></use>
@@ -283,7 +280,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="service mb-5">
+                    <div class="service mb-5" data-aos="fade-left" data-aos-delay="300">
                         <div class="item-icon">
                             <svg>
                                 <use href="../icons.svg#service-4"></use>
@@ -293,12 +290,26 @@
                             <h6>التصميم الداخلي</h6>
                             <p>نقوم بتصميم وتنفيذ اعمال الديكورات الخشبية الداخلية والخارجية بأجود أنواع الاخشاب وفق خطط
                                 مدروسة
-                                <a href="#">تفاصيل الخدمة</a>
+                                <a href="./pages/Interior.html">تفاصيل الخدمة</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service mb-5" data-aos="fade-left" data-aos-delay="400">
+                        <div class="item-icon">
+                            <svg>
+                                <use href="../icons.svg#service-4"></use>
+                            </svg>
+                        </div>
+                        <div class="service-text">
+                            <h6>المقاولات</h6>
+                            <p>نقوم بتصميم وتنفيذ اعمال الديكورات الخشبية الداخلية والخارجية بأجود أنواع الاخشاب وفق خطط
+                                مدروسة
+                                <a href="./pages/contracting.html">تفاصيل الخدمة</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="service-imgs">
+                <div class="service-imgs" data-aos="fade-right">
                     <a data-fancybox="vedio" href="./images/2.mp4">
                         <img src="./images/services.png" alt="">
                     </a>
@@ -308,7 +319,7 @@
     </div>
     <div class="our-work block" id="our-work">
         <div class="container">
-            <div class="section-head mb-5 text-center">
+            <div class="section-head mb-5 text-center width-70">
                 <h4 class="mb-3">
                     <svg>
                         <use href="./icons.svg#menu"></use>
@@ -334,7 +345,7 @@
                 <div class="our-work-items d-flex align-items-start justify-content-between flex-wrap flex-md-nowrap">
                     <div class="items-vertical">
                         <div class="gypsum">
-                            <div class="item h-500">
+                            <div class="item h-500" data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/j-1.png">
                                         <img src="./images/j-1.png" alt="">
@@ -351,7 +362,7 @@
                             </div>
                         </div>
                         <div class="paints">
-                            <div class="item h-200 ">
+                            <div class="item h-200 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/wood-1.png">
                                         <img src="./images/wood-1.png" alt="">
@@ -368,7 +379,7 @@
                             </div>
                         </div>
                         <div class="gypsum">
-                            <div class="item h-400 ">
+                            <div class="item h-400 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/int-1.png">
                                         <img src="./images/int-1.png" alt="">
@@ -387,7 +398,7 @@
                     </div>
                     <div class="items-vertical">
                         <div class="wood">
-                            <div class="item h-200 ">
+                            <div class="item h-200 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/int-2.png">
                                         <img src="./images/int-2.png" alt="">
@@ -404,7 +415,7 @@
                             </div>
                         </div>
                         <div class="gypsum">
-                            <div class="item h-500 ">
+                            <div class="item h-500 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/j-2.png">
                                         <img src="./images/j-2.png" alt="">
@@ -421,7 +432,7 @@
                             </div>
                         </div>
                         <div class="Interior">
-                            <div class="item h-400 ">
+                            <div class="item h-400 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/d-1.png">
                                         <img src="./images/d-1.png" alt="">
@@ -440,7 +451,7 @@
                     </div>
                     <div class="items-vertical">
                         <div class="gypsum">
-                            <div class="item h-400 ">
+                            <div class="item h-400 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/wood-2.png">
                                         <img src="./images/wood-2.png" alt="">
@@ -457,7 +468,7 @@
                             </div>
                         </div>
                         <div class="wood">
-                            <div class="item h-200 ">
+                            <div class="item h-200 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/d-2.png">
                                         <img src="./images/d-2.png" alt="">
@@ -474,7 +485,7 @@
                             </div>
                         </div>
                         <div class="paints">
-                            <div class="item h-500 ">
+                            <div class="item h-500 " data-aos="fade-up">
                                 <div class="item-img">
                                     <a data-fancybox="gallery" href="./images/j-3.png">
                                         <img src="./images/j-3.png" alt="">
@@ -490,6 +501,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -497,7 +509,7 @@
     </div>
     <div class="our-team block" id="our-team">
         <div class="container">
-            <div class="section-head text-center mb-5">
+            <div class="section-head text-center mb-5 width-70">
                 <h4 class="mb-3">
                     <svg>
                         <use href="./icons.svg#menu"></use>
@@ -512,7 +524,7 @@
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="item">
-                    <div class="team text-center">
+                    <div class="team text-center" data-aos="fade-up">
                         <div class="team-img">
                             <img src="./images/team.svg" alt="">
                         </div>
@@ -526,7 +538,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="team text-center">
+                    <div class="team text-center" data-aos="fade-up">
                         <div class="team-img">
                             <img src="./images/team.svg" alt="">
                         </div>
@@ -540,7 +552,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="team text-center">
+                    <div class="team text-center" data-aos="fade-up">
                         <div class="team-img">
                             <img src="./images/team.svg" alt="">
                         </div>
@@ -554,7 +566,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="team text-center">
+                    <div class="team text-center" data-aos="fade-up">
                         <div class="team-img">
                             <img src="./images/team.svg" alt="">
                         </div>
@@ -568,7 +580,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="team text-center">
+                    <div class="team text-center" data-aos="fade-up">
                         <div class="team-img">
                             <img src="./images/team.svg" alt="">
                         </div>
@@ -582,7 +594,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="team text-center">
+                    <div class="team text-center" data-aos="fade-up">
                         <div class="team-img">
                             <img src="./images/team.svg" alt="">
                         </div>
@@ -669,66 +681,104 @@
 
         </div>
     </div>
+    <div class="whatsapp">
+        <a href="#">
+            <svg>
+                <use href="./icons.svg#whatsapp"></use>
+            </svg>
+        </a>
+    </div>
     <div class="footer">
         <div class="container">
-            <div class="footer-content d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
-                <div class="mb-md-0 mb-3">
-                    <h5>الرواد المحترفون</h5>
-                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
-                        حيث يمكنك أن تولد مثل هذا النص أو العديد من انصوص الأخر</p>
+            <div class="footer-content">
+                <div class=" d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
+                    <div class="mb-md-0 mb-3">
+                        <h5>الرواد المحترفون</h5>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                            حيث يمكنك أن تولد مثل هذا النص أو العديد من انصوص الأخر</p>
+                    </div>
+                    <div class="mb-md-0 mb-3">
+                        <h5>اسم التصنيف</h5>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-md-0 mb-3">
+                        <h5>الخدمات</h5>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-md-0 mb-3">
+                        <h5>اتصل بنا</h5>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                            <li>
+                                <a href="#">رابط</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="mb-md-0 mb-3">
-                    <h5>اسم التصنيف</h5>
-                    <ul class="footer-list">
+
+                <div class="media-list mt-3">
+                    <ul class="d-flex align-items-center justify-content-center">
                         <li>
-                            <a href="#">رابط</a>
+                            <a href="#">
+                                <svg>
+                                    <use href="./icons.svg#facebook"></use>
+                                </svg>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">رابط</a>
+                            <a href="#">
+                                <svg>
+                                    <use href="./icons.svg#twitter"></use>
+                                </svg>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">رابط</a>
+                            <a href="#">
+                                <svg>
+                                    <use href="./icons.svg#instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mb-md-0 mb-3">
-                    <h5>الخدمات</h5>
-                    <ul class="footer-list">
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mb-md-0 mb-3">
-                    <h5>اتصل بنا</h5>
-                    <ul class="footer-list">
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
-                        <li>
-                            <a href="#">رابط</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
+
         </div>
         <div class="footer-end">
         </div>
@@ -740,6 +790,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.vide.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"> </script>
     <script src="js/index.js"></script>
 </body>
 
